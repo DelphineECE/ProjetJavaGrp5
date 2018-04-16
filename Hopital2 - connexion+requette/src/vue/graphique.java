@@ -5,6 +5,9 @@
  */
 package vue;
 import java.awt.*;
+import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
@@ -12,14 +15,18 @@ import javax.swing.*;
  *
  * @author delphine
  */
-public class graphique extends JFrame {
+public class graphique extends JFrame implements ActionListener {
     
     JPanel pan = new JPanel() ;
     JPanel pan2 = new JPanel() ;
     JPanel pan3 = new JPanel() ;
+    JButton boutonco = new JButton();
+    JButton boutonrech = new JButton();
+    JButton boutonmaj = new JButton();
+    JButton boutonrepor = new JButton();
     
     private JButton imag = new JButton("h");
-    //private int monchoix=0;
+    
     
     
     // contructeur
@@ -50,21 +57,25 @@ public class graphique extends JFrame {
         reporting.setBackground(Color.green);
         */
         
-        JButton boutonco = new JButton("Connexion");
+        boutonco = new JButton("Connexion");
         boutonco.setPreferredSize(new Dimension(200,80));
         pan.add(boutonco);
+        boutonco.addActionListener(this);
         
-        JButton boutonrech = new JButton("Recherche");
+        boutonrech = new JButton("Recherche");
         boutonrech.setPreferredSize(new Dimension(200,80));
         pan.add(boutonrech);
+        boutonrech.addActionListener(this);
         
-        JButton boutonmaj = new JButton("Mise à jour");
+        boutonmaj = new JButton("Mise à jour");
         boutonmaj.setPreferredSize(new Dimension(200,80));
         pan.add(boutonmaj);
+        boutonmaj.addActionListener(this);
         
-        JButton boutonrepor = new JButton("Reporting");
+        boutonrepor = new JButton("Reporting");
         boutonrepor.setPreferredSize(new Dimension(200,80));
         pan.add(boutonrepor);
+        boutonrepor.addActionListener(this);
         
         ImageIcon imghopital = new ImageIcon("/Users/delphine/NetBeansProjects/Hopital/Hopital2 - connexion+requette/hopital.jpg");
         imag.setIcon( imghopital);
@@ -79,7 +90,31 @@ public class graphique extends JFrame {
                 
     }
     
-    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+                
+                Object source = e.getSource();
+                
+                if (source == boutonco) {
+                    ZDialog fenco = new ZDialog(null,"Connexion",true); 
+                }
+                
+                if (source == boutonrech) {
+                    ZDialog fenrech = new ZDialog(null,"Recherche",true); 
+                }
+                
+                if (source == boutonmaj) {
+                    ZDialog fenmaj = new ZDialog(null,"Mise a jour",true); 
+                }
+                
+                if (source == boutonrepor) {
+                    ZDialog fenrepor = new ZDialog(null,"Reporting",true); 
+                }
+                
+                
+                
+                
+        }
     
     
 }
