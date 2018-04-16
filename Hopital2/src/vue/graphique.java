@@ -41,6 +41,7 @@ public class graphique extends JFrame {
         JPanel repori = new JPanel();
         repori.setBackground(Color.green);
         
+       
         
         //pan.add(boutonconnexion);
         setContentPane(pan);

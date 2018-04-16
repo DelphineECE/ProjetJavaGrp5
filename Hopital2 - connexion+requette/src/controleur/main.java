@@ -27,6 +27,7 @@ public class main {
      */
     public static void main(String[] args) throws SQLException, ClassNotFoundException{
         
+        // interface graphique
         fen = new graphique(); //  instancier le graphique  
         fen.setVisible(true);
         

@@ -15,10 +15,11 @@ import javax.swing.*;
 public class graphique extends JFrame {
     
     JPanel pan = new JPanel() ;
-    //private JButton boutonconnexion = new JButton("Connexion");
-    CardLayout cl = new CardLayout();
+    JPanel pan2 = new JPanel() ;
+    JPanel pan3 = new JPanel() ;
+    
+    private JButton imag = new JButton("h");
     //private int monchoix=0;
-    String[] listContent = {"Connexion", "MAJ", "Respori"};
     
     
     // contructeur
@@ -29,88 +30,56 @@ public class graphique extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pan = new JPanel();     // instancier le panneau
-        getContentPane().add(pan, BorderLayout.CENTER);
         
-        JPanel connexion = new JPanel();
+        pan = new JPanel();     // instancier le panneau
+        getContentPane().add(pan, BorderLayout.NORTH);
+        pan2 = new JPanel();     // instancier le panneau
+        getContentPane().add(pan2, BorderLayout.CENTER);
+        imag = new JButton("");
+        
+        pan3 = new JPanel();     // instancier le panneau
+        getContentPane().add(pan3, BorderLayout.SOUTH);
+        
+        /*JPanel connexion = new JPanel();
         connexion.setBackground(Color.red);
         
         JPanel maj = new JPanel();
         maj.setBackground(Color.blue);
         
-        JPanel repori = new JPanel();
-        repori.setBackground(Color.green);
+        JPanel reporting = new JPanel();
+        reporting.setBackground(Color.green);
+        */
+        
+        JButton boutonco = new JButton("Connexion");
+        boutonco.setPreferredSize(new Dimension(200,80));
+        pan.add(boutonco);
+        
+        JButton boutonrech = new JButton("Recherche");
+        boutonrech.setPreferredSize(new Dimension(200,80));
+        pan.add(boutonrech);
+        
+        JButton boutonmaj = new JButton("Mise à jour");
+        boutonmaj.setPreferredSize(new Dimension(200,80));
+        pan.add(boutonmaj);
+        
+        JButton boutonrepor = new JButton("Reporting");
+        boutonrepor.setPreferredSize(new Dimension(200,80));
+        pan.add(boutonrepor);
+        
+        ImageIcon imghopital = new ImageIcon("/Users/delphine/NetBeansProjects/Hopital/Hopital2 - connexion+requette/hopital.jpg");
+        imag.setIcon( imghopital);
+        pan2.add(imag);
+        
+        JButton boutonequipe = new JButton("Gestion d'un centre hospitalier par Vincent B, Tom B et Delphine H");
+        boutonequipe.setPreferredSize(new Dimension(600,50));
+        pan3.add(boutonequipe);
         
         
-        //pan.add(boutonconnexion);
-        setContentPane(pan);
         setVisible(true);
                 
     }
     
     
-    // methode pr affciher grille 
     
-   /*public void affichegrille() {
-        
-        pan.setLayout(new GridLayout(5,5));
-        boutons = new JButton[][];
-        
-        for (int i=0; i<10; i++) {
-            boutons[i]=new JButton[laby.getTailleX()]; // pr chaque ligne, instancier les boutons
-            
-        }
-        
-        // ajouter les boutons dans le panneau
-        for (int i=0; i<laby.getTailleY();i++) {
-            for (int j=0; j<laby.getTailleX();j++) {
-                boutons[i][j] = new JButton();
-                pan.add(boutons[i][j]);
-            }
-        }
-        //ajout des deux boutons pour le déplacement
-        //ajouter les boutons de déplacement
-       pan2.setLayout(new GridLayout(1,2)); // mise en forme avec une grille
-       bouton1 = new JButton[2]; // instancier les lignes de la matrice de boutons
-       bouton1[0] = new JButton("DFS"); // instancier chaque bouton
-       bouton1[0].addActionListener(new BoutonListener());
-       pan2.add(bouton1[0]);
-       
-       //bouton1[0].addActionListener(new BoutonListener());
-       bouton1[1] = new JButton("Aleatoire"); // instancier chaque bouton
-       bouton1[1].addActionListener(new Bouton2Listener());
-       pan2.add(bouton1[1]);
-    
-        
-        
-        
-        // Lire les cases du labyrinthe
-        for (int y = 0; y < laby.getTailleY(); y++) { // lignes
-
-            for (int x = 0; x < laby.getTailleX(); x++) {
-                Case c = laby.getCase(y, x);
-                if (c instanceof CaseMur) {  
-                    ImageIcon imagemur = new ImageIcon("/Users/delphine/NetBeansProjects/tp3-Labyrinthe tom/b.jpg");
-                    boutons[x][y].setIcon( imagemur);
- 
-                } else {
-                    if (c.getVisited()) {
-                        
-                        ImageIcon imagesol = new ImageIcon("/Users/delphine/NetBeansProjects/tp3-Labyrinthe tom/noir.jpg");
-                        boutons[x][y].setIcon( imagesol);
-                        
-                    } else {
-                        
-                        ImageIcon imageok = new ImageIcon("/Users/delphine/NetBeansProjects/tp3-Labyrinthe tom/c.jpg");
-                        boutons[x][y].setIcon( imageok);
-                    }
-                }
-            }
-            
-        }
-        
-        this.setVisible(true);
-
-    } */
     
 }
