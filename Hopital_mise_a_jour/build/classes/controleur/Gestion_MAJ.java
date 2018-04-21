@@ -205,6 +205,7 @@ public class Gestion_MAJ
        //methode qui va modifier le champ voulu dans la table voulu
         public void modification(String table , String id_no ,String no,String id_colonne,String modification) throws SQLException
     {
+        System.out.print("UPDATE "+table+" SET "+ id_colonne +"='"+ modification +"' WHERE "+id_no+" LIKE "+no+";");
             conn.executeUpdate("UPDATE "+table+" SET "+ id_colonne +"='"+ modification +"' WHERE "+id_no+" LIKE "+no+";");
             
     }
@@ -235,7 +236,16 @@ public class Gestion_MAJ
         
         public void inserer_ligne(String table, String[] insertion) throws SQLException
         {
-            conn.executeUpdate("INSERT INTO"+table+" VALUES (null, '" +insertion[1]+ "', '" +insertion[2]+ "', '" +insertion[3]+ "', '" +insertion[4]+ "')");
+            String phrase="";
+            for(int i=0;i<insertion.length;i++)
+            {
+                if(i==insertion.length-1)
+                {
+                    phrase=phrase+" '"+insertion[i]+"' ";
+                }
+                else{phrase=phrase+" '"+insertion[i]+"',";}
+            }
+            conn.executeUpdate("INSERT INTO "+table+" VALUES ("+phrase+")");
         }
 
                         

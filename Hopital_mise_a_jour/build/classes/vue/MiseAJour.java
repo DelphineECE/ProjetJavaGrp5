@@ -603,7 +603,7 @@ public class MiseAJour extends JFrame  {
                       no=miss1[1];
                       miss1[0]="code_service:"+miss1[0]; miss1[1]="no_chambre:"+miss1[1];miss1[2]="surveillant:"+miss1[2];miss1[3]="nb_lits:"+miss1[3]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -624,7 +624,7 @@ public class MiseAJour extends JFrame  {
                       no=miss1[0];
                       miss1[0]="numero:"+miss1[0]; miss1[1]="specialite:"+miss1[1]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -642,10 +642,10 @@ public class MiseAJour extends JFrame  {
                       table="employe";
                       id_no="numero";
                       String miss1[] = combo_employe.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="numero:"+miss1[0]; miss1[1]="nom:"+miss1[1];miss1[2]="prenom:"+miss1[2];miss1[3]="adresse:"+miss1[3];miss1[4]="tel:"+miss1[4]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -663,10 +663,10 @@ public class MiseAJour extends JFrame  {
                       table="hospitalisation";
                       id_no="no_malade";
                       String miss1[] = combo_hospitalisation.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="no_malade:"+miss1[0]; miss1[1]="code_service:"+miss1[1];miss1[2]="no_chambre:"+miss1[2];miss1[3]="lit:"+miss1[3]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -684,10 +684,10 @@ public class MiseAJour extends JFrame  {
                       table="infirmier";
                       id_no="numero";
                       String miss1[] = combo_infirmier.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="numero:"+miss1[0]; miss1[1]="code_service:"+miss1[1];miss1[2]="rotation:"+miss1[2];miss1[3]="salaire:"+miss1[3]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -705,10 +705,10 @@ public class MiseAJour extends JFrame  {
                       table="malade";
                       id_no="numero";
                       String miss1[] = combo_malade.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="numero:"+miss1[0]; miss1[1]="nom:"+miss1[1];miss1[2]="prenom:"+miss1[2];miss1[3]="adresse:"+miss1[3];miss1[4]="tel:"+miss1[4];miss1[5]="mutuelle:"+miss1[5]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -726,10 +726,10 @@ public class MiseAJour extends JFrame  {
                       table="service";
                       id_no="code";
                       String miss1[] = combo_service.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="code:"+miss1[0]; miss1[1]="nom:"+miss1[1];miss1[2]="batiment:"+miss1[2];miss1[3]="directeur:"+miss1[3]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                       combo_choix_modif = new JComboBox(miss1);
                       combo_choix_modif.setBackground(Color.cyan);
@@ -747,10 +747,10 @@ public class MiseAJour extends JFrame  {
                       table="soigne";
                       id_no="no_docteur";
                       String miss1[] = combo_soigne.getSelectedItem().toString().split(","); //on recupere chaque attribut de la ligne
-                      no=miss1[1];
+                      no=miss1[0];
                       miss1[0]="no_docteur:"+miss1[0]; miss1[1]="no_malade:"+miss1[1]; //composante informative pour le jbox
                         	 	 	 
-                      jframe_modif.setSize(1500, 300);
+                      jframe_modif.setSize(1500, 200);
                       JPanel pan_modif1 = new JPanel();
                        combo_choix_modif = new JComboBox(miss1);
                        combo_choix_modif.setBackground(Color.cyan);
@@ -905,7 +905,7 @@ public class MiseAJour extends JFrame  {
                     
                     choix_sql=combo_choix_modif.getSelectedItem().toString();
                     String[] tmp = choix_sql.split(":"); //le choix fait est le choix dans le jcombo en bas de la fenetre
-                    id_colonne=tmp[0];
+                    id_colonne=tmp[0];//nom de la colonne dans la table
                     derniere = new JFrame("Entrez les modifications de : "+tmp[1]);
                     derniere.setSize(1000,500);
                     derniere.setLocationRelativeTo(null);
